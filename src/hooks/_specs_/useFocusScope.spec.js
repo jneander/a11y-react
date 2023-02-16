@@ -1,7 +1,8 @@
 import React, {useRef} from 'react'
 
-import {createContainer, fireEvent} from '@jneander/spec-utils-dom'
+import {createContainer} from '@jneander/spec-utils-dom'
 import {render} from '@jneander/spec-utils-react'
+import {fireEvent} from '@testing-library/react'
 
 import useFocusScope from '../useFocusScope'
 
