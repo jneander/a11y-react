@@ -26,7 +26,7 @@ module.exports = {
     },
 
     {
-      files: ['./**/*.spec.js', './**/_specs_/**/*.js'],
+      files: ['./**/*.spec.js', './**/specs/**/*.js'],
 
       globals: {
         expect: 'writable',
@@ -34,7 +34,7 @@ module.exports = {
     },
 
     {
-      files: ['./**/*.spec.js', './**/_specs_/**/*.js'],
+      files: ['./**/*.spec.js', './**/specs/**/*.js'],
 
       rules: {
         'react/prop-types': 'off',
