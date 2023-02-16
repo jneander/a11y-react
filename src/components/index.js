@@ -1,2 +1,2 @@
-export * from './VisualOnly'
-export * from './VisuallyHidden'
+export * from './visual-only'
+export * from './visually-hidden'

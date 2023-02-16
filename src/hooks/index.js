@@ -1,1 +1,1 @@
-export * from './useFocusScope'
+export * from './use-focus-scope'
