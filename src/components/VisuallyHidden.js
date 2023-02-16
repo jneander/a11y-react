@@ -8,7 +8,7 @@ const style = {
   overflow: 'hidden',
   position: 'absolute',
   whiteSpace: 'nowrap',
-  width: '1px'
+  width: '1px',
 }
 
 export default function VisuallyHidden(props) {
@@ -18,9 +18,9 @@ export default function VisuallyHidden(props) {
 }
 
 VisuallyHidden.propTypes = {
-  as: elementType
+  as: elementType,
 }
 
 VisuallyHidden.defaultProps = {
-  as: 'span'
+  as: 'span',
 }

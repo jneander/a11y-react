@@ -8,9 +8,9 @@ export default function VisualOnly(props) {
 }
 
 VisualOnly.propTypes = {
-  as: elementType
+  as: elementType,
 }
 
 VisualOnly.defaultProps = {
-  as: 'span'
+  as: 'span',
 }
