@@ -4,7 +4,7 @@ import {createContainer} from '@jneander/spec-utils-dom'
 import {render} from '@jneander/spec-utils-react'
 import {fireEvent} from '@testing-library/react'
 
-import useFocusScope from '../useFocusScope'
+import {useFocusScope} from '../useFocusScope'
 
 describe('Component using .useFocusScope()', () => {
   let $container

@@ -1,7 +1,7 @@
 import {elementType} from 'prop-types'
 import React from 'react'
 
-export default function VisualOnly(props) {
+export function VisualOnly(props) {
   const {as: Component, ...otherProps} = props
 
   return <Component {...otherProps} aria-hidden={true} />

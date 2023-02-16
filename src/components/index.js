@@ -1,2 +1,2 @@
-export {default as VisualOnly} from './VisualOnly'
-export {default as VisuallyHidden} from './VisuallyHidden'
+export * from './VisualOnly'
+export * from './VisuallyHidden'

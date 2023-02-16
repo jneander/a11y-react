@@ -2,7 +2,7 @@ import {useEffect} from 'react'
 
 import {findTabbable} from '@jneander/a11y-dom'
 
-export default function useFocusScope(options = {}) {
+export function useFocusScope(options = {}) {
   const {containerRef, defaultFocusRef} = options
 
   useEffect(() => {

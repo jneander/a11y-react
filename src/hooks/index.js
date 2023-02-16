@@ -1,1 +1,1 @@
-export {default as useFocusScope} from './useFocusScope'
+export * from './useFocusScope'
