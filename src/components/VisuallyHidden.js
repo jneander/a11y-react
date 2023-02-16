@@ -11,7 +11,7 @@ const style = {
   width: '1px',
 }
 
-export default function VisuallyHidden(props) {
+export function VisuallyHidden(props) {
   const {as: Component, ...otherProps} = props
 
   return <Component {...otherProps} style={style} />
