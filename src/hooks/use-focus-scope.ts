@@ -1,10 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-import {useEffect} from 'react'
+import {MutableRefObject, useEffect} from 'react'
 
 import {findTabbable} from '@jneander/a11y-dom'
 
-export function useFocusScope(options = {}) {
+export interface UseFocusScopeOptions {
+  containerRef: MutableRefObject<HTMLElement>
+  defaultFocusRef: MutableRefObject<HTMLElement>
+}
+
+export function useFocusScope(options: UseFocusScopeOptions) {
   const {containerRef, defaultFocusRef} = options
 
   useEffect(() => {
@@ -16,7 +19,7 @@ export function useFocusScope(options = {}) {
   useEffect(() => {
     const $container = containerRef.current
 
-    const handleKeyDown = event => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.keyCode !== 9) {
         return
       }

@@ -1,18 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-import {elementType} from 'prop-types'
-import React from 'react'
+import type {ElementType, ReactNode} from 'react'
 
-export function VisualOnly(props) {
-  const {as: Component, ...otherProps} = props
-
-  return <Component {...otherProps} aria-hidden={true} />
+export interface VisualOnlyProps {
+  as: ElementType
+  children: ReactNode
 }
 
-VisualOnly.propTypes = {
-  as: elementType,
-}
+export function VisualOnly(props: VisualOnlyProps) {
+  const {as: Component = 'span'} = props
 
-VisualOnly.defaultProps = {
-  as: 'span',
+  return <Component aria-hidden={true} />
 }

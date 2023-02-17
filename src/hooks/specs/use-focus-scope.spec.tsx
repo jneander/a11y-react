@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React, {useRef} from 'react'
 
 import {createContainer} from '@jneander/spec-utils-dom'
@@ -9,7 +7,7 @@ import {fireEvent} from '@testing-library/react'
 import {useFocusScope} from '../use-focus-scope'
 
 describe('Component using .useFocusScope()', () => {
-  let $container
+  let $container: HTMLElement
 
   beforeEach(() => {
     $container = createContainer()
@@ -48,7 +46,7 @@ describe('Component using .useFocusScope()', () => {
     await render(<Component />, {$container})
   }
 
-  function getButton(num) {
+  function getButton(num: number): HTMLButtonElement {
     return $container.querySelector(`#button-${num}`)
   }
 

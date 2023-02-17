@@ -1,7 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-import {elementType} from 'prop-types'
-import React from 'react'
+import type {ElementType, ReactNode} from 'react'
 
 const style = {
   clip: 'rect(0 0 0 0)',
@@ -13,16 +10,13 @@ const style = {
   width: '1px',
 }
 
-export function VisuallyHidden(props) {
-  const {as: Component, ...otherProps} = props
-
-  return <Component {...otherProps} style={style} />
+export interface VisuallyHiddenProps {
+  as: ElementType
+  children: ReactNode
 }
 
-VisuallyHidden.propTypes = {
-  as: elementType,
-}
+export function VisuallyHidden(props: VisuallyHiddenProps) {
+  const {as: Component = 'span'} = props
 
-VisuallyHidden.defaultProps = {
-  as: 'span',
+  return <Component style={style} />
 }
