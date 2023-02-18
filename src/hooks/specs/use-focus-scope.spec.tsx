@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 
 import {createContainer} from '@jneander/spec-utils-dom'
-import {render} from '@jneander/spec-utils-react'
+import {render} from '@testing-library/react'
 import {fireEvent} from '@testing-library/react'
 
 import {useFocusScope} from '../use-focus-scope'
@@ -43,7 +43,7 @@ describe('Component using .useFocusScope()', () => {
   }
 
   async function renderComponent() {
-    await render(<Component />, {$container})
+    await render(<Component />, {container: $container})
   }
 
   function getButton(num: number): HTMLButtonElement {
