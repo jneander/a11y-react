@@ -7,6 +7,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/jneander/a11y-react/compare/v2.0.0...v2.1.0) (2023-02-18)
+
+### Features
+
+- support react 18
+  ([5054adc](https://github.com/jneander/a11y-react/commit/5054adc7ab39d050ddfed48f49bf65fa2cc704ca))
+
 ## [2.0.0](https://github.com/jneander/a11y-react/compare/v1.0.2...v2.0.0) (2023-02-18)
 
 ### ⚠ BREAKING CHANGES
