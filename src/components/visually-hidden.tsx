@@ -1,4 +1,4 @@
-import type {ElementType, ReactNode} from 'react'
+import {ElementType, ReactNode} from 'react'
 
 const style = {
   clip: 'rect(0 0 0 0)',
@@ -11,12 +11,12 @@ const style = {
 }
 
 export interface VisuallyHiddenProps {
-  as: ElementType
+  as?: ElementType
   children: ReactNode
 }
 
 export function VisuallyHidden(props: VisuallyHiddenProps) {
-  const {as: Component = 'span'} = props
+  const {as: Component = 'span', children} = props
 
-  return <Component style={style} />
+  return <Component style={style}>{children}</Component>
 }
