@@ -1,9 +1,9 @@
 import {createContainer} from '@jneander/spec-utils-dom'
 import {render, screen} from '@testing-library/react'
 
-import {VisuallyHidden} from './visually-hidden'
+import {VisualOnly} from './visual-only'
 
-describe('components > VisuallyHidden', () => {
+describe('components > VisualOnly', () => {
   let $container: HTMLElement
 
   beforeEach(() => {
@@ -15,18 +15,18 @@ describe('components > VisuallyHidden', () => {
   })
 
   it('displays the given content', () => {
-    render(<VisuallyHidden>Content</VisuallyHidden>, {container: $container})
+    render(<VisualOnly>Content</VisualOnly>, {container: $container})
     expect(screen.getByText('Content')).to.exist
   })
 
   describe('`as` prop', () => {
     it('is used to render the underlying element', () => {
-      render(<VisuallyHidden as="div">Content</VisuallyHidden>, {container: $container})
+      render(<VisualOnly as="div">Content</VisualOnly>, {container: $container})
       expect(screen.getByText('Content').tagName).to.equal('DIV')
     })
 
     it('defaults to "span"', () => {
-      render(<VisuallyHidden>Content</VisuallyHidden>, {container: $container})
+      render(<VisualOnly>Content</VisualOnly>, {container: $container})
       expect(screen.getByText('Content').tagName).to.equal('SPAN')
     })
   })
